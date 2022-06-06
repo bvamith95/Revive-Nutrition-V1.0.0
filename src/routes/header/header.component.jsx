@@ -26,7 +26,7 @@ const Header = ()=> {
         </Link>
 
         <div className='user-links-container'>
-            <Link className="nav-link" to='/sign-in'>
+            <Link className="nav-link" to='/auth'>
             Sign In
             </Link>
 

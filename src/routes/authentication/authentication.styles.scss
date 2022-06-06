@@ -1,0 +1,15 @@
+.authentication-page{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    background-color: #FEFAF1;
+}
+.authentication-container{
+
+    display: flex;
+    height: 100%;
+    width: 900px;
+    justify-content: space-between;
+    margin: 50px auto
+}

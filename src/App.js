@@ -4,7 +4,7 @@ import Shop from './routes/shop/shop.component';
 
 import Header from './routes/header/header.component';
 import Consultation from './routes/consultation/consultation.component';
-import SignIn from './routes/sign-in/sign-in.component';
+import Authentication from './routes/authentication/authentication.component';
 
 const App = ()=> {
 
@@ -15,7 +15,7 @@ const App = ()=> {
     <Route path='/' element={<Header/>}>
       <Route path='/' element={<Shop />}/>
       <Route path='/consultation' element={ <Consultation/> }/>
-      <Route path='/sign-in' element={ <SignIn/> }/>
+      <Route path='/auth' element={ <Authentication/> }/>
     </Route>
 
     </Routes>
