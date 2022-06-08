@@ -1,13 +1,26 @@
-import { Fragment } from 'react';
+import { Fragment, useContext } from 'react';
 import {Outlet, Link} from 'react-router-dom';
+
+import CartIcon from '../../components/cart-icon/cart-icon.component';
+import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component';
+
+import { UserContext } from '../../context/user.context';
+import { CartContext, CartProvider } from '../../context/cart.context';
 
 import {ReactComponent as ReviveLogo } from '../../assests/revive.svg';
 import {ReactComponent as AccountLogo} from '../../assests/account.svg';
-import {ReactComponent as CartLogo} from '../../assests/cart.svg';
 
+import { signOutUser } from '../../utils/firebase/firebase.utils'
 import './header.styles.scss';
 
 const Header = ()=> {
+  const {currentUser} = useContext(UserContext);
+  const { isCartOpen } = useContext(CartContext);
+  const signOutHandler = async () => {
+    await signOutUser();
+  };
+
+
     return (
       <Fragment>
         <div className="header">
@@ -25,22 +38,30 @@ const Header = ()=> {
             <ReviveLogo className="logo"/>
         </Link>
 
-        <div className='user-links-container'>
-            <Link className="nav-link" to='/auth'>
-            Sign In
-            </Link>
 
+        <div className='user-links-container'>
+
+        {currentUser ? (
+          <span className='nav-link' onClick={signOutHandler}>
+            {' '}
+            Sign Out{' '}
+          </span>
+        ) : (
+          <Link className='nav-link' to='/auth'>
+            Sign In
+          </Link>
+        )}
+  
             <Link className="logo-container" to='/'>
               <AccountLogo className="logo"/>
             </Link>
 
             <Link className="logo-container" to='/'>
-              <CartLogo className="logo"/>
+              <CartIcon/>
             </Link>
               
           </div>
-
-    
+          {isCartOpen && <CartDropdown />}
         </div>
         <Outlet/>
       </Fragment>
@@ -48,4 +69,4 @@ const Header = ()=> {
   
   }
 
-export default Header;
+export default Header; 

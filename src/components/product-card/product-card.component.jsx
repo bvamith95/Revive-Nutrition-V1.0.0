@@ -4,7 +4,7 @@ const ProductCard = ( {product}) => {
     const {imageUrl, title, description, price} = product;
     return ( 
 
-        <div className="product-card">
+        <div className="product-card" >
           <div 
           className="product-card__img" 
           style={{
