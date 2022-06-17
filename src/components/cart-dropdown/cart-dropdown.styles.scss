@@ -1,29 +1,79 @@
 .cart-dropdown-container {
   position: absolute;
-  width: 240px;
-  height: 340px;
+  width: 450px;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  border: 1px solid black;
-  background-color: white;
-  top: 90px;
-  right: 40px;
+  padding: 90px 25px 15px;
+  background-color: #FEFAF1;
+  top: 0px;
+  right: 0px;
   z-index: 5;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
   .empty-message {
     font-size: 18px;
+    font-family: 'Ovo', serif;
     margin: 50px auto;
   }
 
-  .cart-items {
-    height: 240px;
-    display: flex;
-    flex-direction: column;
-    overflow: scroll;
+  .cart-heading{
+    border-bottom: 1px solid #DDDDDD;
+
+
+    h2{
+      font-family: 'Ovo', serif;
+      font-weight: normal;
+      font-size: 28px;
+      margin-bottom: 15px;
+      
+    }
   }
 
-  button {
-    margin-top: auto;
+
+
+  .cart-items {
+    margin-top: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
   }
+
+  .cart-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 15px;
+    border-top: 1px solid #DDDDDD;
+
+    &__details{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+
+      .quantity{
+        font-family: 'Ovo', serif;
+        font-weight: normal;
+        font-size: 16px;
+        margin-bottom: 2px;
+      }
+
+      .total{
+        font-size: 24px;
+        font-weight: 700;
+        padding-top: 3px;
+        border-top: 1px solid #000;
+
+      }
+
+      button {
+        margin-top: auto;
+      }
+    }
+
+
+  }
+
 }

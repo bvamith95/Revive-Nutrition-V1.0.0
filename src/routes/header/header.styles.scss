@@ -8,13 +8,16 @@
     align-items: center;
     padding: 0 1.5rem;
     font-weight: 500;
+    z-index: 10;
+    box-shadow: rgba(4, 4, 0, 0.16) 0px 1px 4px;
+
   
     .logo-container {
-
+      z-index: 10;
     }
 
     .logo{
-     
+      z-index: 10;
     }
   
     .nav-links-container {
@@ -37,6 +40,7 @@
     .nav-link {
       padding: 10px 25px;
       cursor: pointer;
+      // z-index: 10;
         &:hover{
           color: #F79750;
         }

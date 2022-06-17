@@ -4,8 +4,8 @@ import {Outlet, Link} from 'react-router-dom';
 import CartIcon from '../../components/cart-icon/cart-icon.component';
 import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component';
 
-import { UserContext } from '../../context/user.context';
-import { CartContext, CartProvider } from '../../context/cart.context';
+import { UserContext } from '../../contexts/user.context';
+import { CartContext, CartProvider } from '../../contexts/cart.context';
 
 import {ReactComponent as ReviveLogo } from '../../assests/revive.svg';
 import {ReactComponent as AccountLogo} from '../../assests/account.svg';
@@ -56,9 +56,8 @@ const Header = ()=> {
               <AccountLogo className="logo"/>
             </Link>
 
-            <Link className="logo-container" to='/'>
-              <CartIcon/>
-            </Link>
+            <CartIcon/>
+
               
           </div>
           {isCartOpen && <CartDropdown />}
