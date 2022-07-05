@@ -1,20 +1,24 @@
-import { useContext } from 'react';
-
-import { ProductsContext } from '../../contexts/products.context';
-
-
-import ProductContainer from '../../components/product-container/product-container.component';
+import { Routes, Route } from 'react-router';
+import CatagoriesPreview from '../../components/categories-preview/catagories-preview.component';
+import Category from '../category/category.component';
 import ShopFilter from '../../components/shop-filter/shop-filter-component';
+
 import './shop.component.styles.scss';
 
 const Shop = ()=> {
-  const {products} = useContext(ProductsContext);
 
   return (
+    
     <div className="page_container">
       <div className="shop_container"> 
-        <ShopFilter />
-        <ProductContainer products={products}/>
+      <ShopFilter/>
+        <Routes>
+          <Route index element={<CatagoriesPreview />} />
+          <Route path=':goal' element={<Category/>} />
+        </Routes>
+
+
+        
       </div>
     </div>
 
@@ -22,3 +26,6 @@ const Shop = ()=> {
   };  
 
   export default Shop;
+
+
+
