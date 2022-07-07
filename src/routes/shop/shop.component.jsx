@@ -3,7 +3,11 @@ import CatagoriesPreview from '../../components/categories-preview/catagories-pr
 import Category from '../category/category.component';
 import ShopFilter from '../../components/shop-filter/shop-filter-component';
 
+
+
 import './shop.component.styles.scss';
+
+
 
 const Shop = ()=> {
 
