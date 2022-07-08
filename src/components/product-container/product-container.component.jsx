@@ -11,10 +11,12 @@ const ProductContainer = ({ title, products })=>{
 return (
     
     <div className="products-container--container">
-
-          <h2>
+          <div className='product-title-container'>
+          <span>
           <Link className='title' to={title} >{title.toUpperCase()}</Link>
-          </h2>
+          </span>
+          </div>
+
 
           <div className='products-container--products'>
           {products

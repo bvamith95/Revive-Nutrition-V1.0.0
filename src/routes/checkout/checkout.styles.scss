@@ -16,7 +16,8 @@
 
   .checkout-header {
     width: 100%;
-    padding: 10px 0;
+    height: 80px;
+
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid darkgrey;
@@ -37,7 +38,7 @@
     }
   }
 
-  .sub-total-container{
+  .cart-total-container{
     
     border-top: 1px solid grey;
     display: flex;
@@ -71,5 +72,57 @@
 .order-details-container{
   background-color: #fff;
   width: 25%;
-  padding: 50px 20px;
+  padding: 30px 50px;
+  display: flex;
+  flex-direction: column;
+
+  .order-details-header{
+    height: 80px;
+    display: flex;
+    align-items: flex-end;
+
+     h2{
+      font-size: 28px;
+      font-family: 'Ovo', serif;
+     }
+  }
+
+  .sub-total-container{
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 10px;
+
+    .sub-total-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+
+      span{
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .order-total-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+    margin-bottom: 40px;
+    
+    h3{
+      font-size: 28px;
+      font-family: 'Ovo', serif;
+    }
+
+    span{
+      font-size: 36px;
+      font-weight: 700;
+    }
+  }
+
 }

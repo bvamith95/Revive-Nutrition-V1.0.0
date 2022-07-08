@@ -13,6 +13,7 @@ const ShopFilter = ()=> {
 
     return (
         <div className='shop_filter_container'>
+        <h2>Goals</h2>
           <Link className='filter-link' to="/shop">
           <h3>
           Shop All
