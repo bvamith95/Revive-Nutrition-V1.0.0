@@ -46,10 +46,10 @@ export const db = getFirestore();
 
 export const addCollectionAndDocuments = async (
   collectionKey,
-  objectsToAdd
+  objectsToAdd,
 ) => {
-  const batch = writeBatch(db);
   const collectionRef = collection(db, collectionKey);
+  const batch = writeBatch(db);
   
   objectsToAdd.forEach((object) => {
      const docRef = doc(collectionRef, object.goal.toLowerCase());
@@ -57,8 +57,25 @@ export const addCollectionAndDocuments = async (
   });
 
   await batch.commit();
-  console.log('done');
+  console.log('done with goal');
 };
+
+export const addQuestionsAndAnswers = async (
+  collectionKey,
+  objectsToAdd,
+) => {
+  const collectionRef = collection(db, collectionKey);
+  const batch = writeBatch(db);
+  
+  objectsToAdd.forEach((object) => {
+     const docRef = doc(collectionRef, object.category.toLowerCase());
+     batch.set(docRef, object);
+  });
+
+  await batch.commit();
+  console.log('done with questions');
+};
+
 
 export const getCategoriesAndDocuments = async () => {
   const collectionRef = collection(db, 'goals');
@@ -70,10 +87,25 @@ export const getCategoriesAndDocuments = async () => {
     acc[goal.toLowerCase()] = items;
     return acc;
   }, {});
-
   return categoryMap;
 };
 
+export const getQuestionsAndAnswers = async () => {
+  const collectionRef = collection(db, 'quiz_questions');
+  const q = query(collectionRef);
+
+  const querySnapshot = await getDocs(q);
+  const questionsMap = querySnapshot.docs.reduce((acc, docSnapshot) => {
+    const { category, questions } = docSnapshot.data();
+    acc[category.toLowerCase()] = questions;
+    return acc;
+  }, {});
+  return questionsMap;
+};
+
+
+
+// Create another function to write user quiz entries createQuizEntry
 export const createUserDocumentFromAuth = async (
   userAuth,
   additionalInformation = {}

@@ -65,7 +65,7 @@ const Checkout = () => {
                     <h3>Total</h3>
                     <span className='total'>Rs. {orderTotal}</span>
                     </div>
-                    <Button>Proceed to Pay ></Button>
+                    <Button>Proceed to Pay →</Button> 
 
                 </div>
 

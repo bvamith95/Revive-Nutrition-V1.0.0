@@ -7,6 +7,7 @@ import App from './App';
 import { UserProvider } from './contexts/user.context';
 import { GoalsProvider } from './contexts/goals.context';
 import { CartProvider  } from './contexts/cart.context';
+import { QuizProvider } from './contexts/quiz.context';
 
 import './index.scss';
 
@@ -17,13 +18,15 @@ root.render(
   
   <BrowserRouter >
     <UserProvider>
+    <QuizProvider>
       <GoalsProvider>
         <CartProvider>
          <App />
         </CartProvider>
-
       </GoalsProvider>
+      </QuizProvider>
     </UserProvider>
+
   </BrowserRouter>
 
 );

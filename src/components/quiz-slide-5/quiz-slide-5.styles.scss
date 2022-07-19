@@ -1,0 +1,42 @@
+.quiz-body-5{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+
+    .quiz-header{
+        margin: 10px 0 50px;
+        .quiz-question{
+            font-size: 32px;
+            font-weight: 500;
+            text-transform: none;
+        } 
+    }
+
+    .quiz-answers-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .input-answer{
+            width: 370px;
+        }
+
+        .submit-answer{
+            margin-left: 20px;
+            svg{
+                width: 38px;
+                height: 38px;
+
+                :hover{
+                    cursor: pointer;
+                }
+            }
+
+        }
+
+        }
+    }
+
+
