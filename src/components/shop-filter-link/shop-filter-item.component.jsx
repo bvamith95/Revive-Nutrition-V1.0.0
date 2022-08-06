@@ -3,12 +3,11 @@ import { Link } from 'react-router-dom';
 
 import './shop-filter-item.styles.scss';
 
-const ShopFilterItem = ({title})=> {
-
+const ShopFilterItem = ({link, key, title})=> {
     return (
         
         <h3>
-        <Link className='filter-link' to={title} >{title}</Link>
+        <Link className='filter-link' key={key} to={link} >{title}</Link>
         </h3>
 
     )

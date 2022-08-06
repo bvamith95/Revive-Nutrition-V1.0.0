@@ -1,20 +1,25 @@
-import './quiz-category.styles.scss';
-import QuizSlideSelector from '../../components/quiz-slide-selector/quiz-slide-selector.component';
+import './quiz-container.styles.scss';
 
-const QuizCategory = (questions)=> {
+import QuizSlideSelector from '../quiz-slide-selector/quiz-slide-selector.component';
+import { QuizContext } from '../../contexts/quiz.context';
+import { useContext} from 'react'
 
-        
+const QuizCategory = ()=> {
+    const { questionsMap, questionCount } = useContext(QuizContext);
+
+    return (
         <div>
-            {
-                questions.map((question)=>{(
-                                <QuizSlideSelector  templatetype={question.questionTemplate} question={question}/>
-                                )
-                })
-            }
+        {Object.keys(questionsMap).map((key)=>{
+            const questions = questionsMap[key];
+            return (
+              <div>
+              <QuizSlideSelector key={key}  question={questions[questionCount]}/>
+              </div>
+            ) 
+          })}
+
         </div>
-
-
-
-}
+    )
+  }
 
 export default QuizCategory;

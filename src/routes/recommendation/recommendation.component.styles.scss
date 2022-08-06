@@ -1,0 +1,220 @@
+.recommendation-page{
+    
+    .intro{
+        height: 650px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        
+        &__img-container{
+            width: 50%;
+            
+            &--img1{
+                position: absolute;
+                width: 362px;
+                height: 331px;
+                left: 295px;
+                top: 166px;    
+                z-index: 10;        
+        
+            }
+        
+            &--img2{
+                position: absolute;
+                width: 360px;
+                height: 360px;
+                left: 413px;
+                top: 270px;
+        
+            }
+        }
+
+        
+    &__text-container{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        .recommendation-text{
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: 0.1em;
+            text-decoration: underline;
+
+        }
+
+        h2{
+
+            font-weight: 500;
+            font-size: 48px;
+            line-height: 58px;
+            margin: 0;
+            span{
+            font-weight: 300;
+            }
+        }
+        p{
+            font-family: 'Ovo';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 20px;
+            width: 400px;
+            span{
+                color: #F79750;
+                text-transform: capitalize;
+            }
+        }
+        h3{
+            margin: 0;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            color: #F79750;
+
+            &:hover{
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+     }
+    }
+
+    .product-recommendation-container{
+        
+
+        min-height: 650px;
+        display: flex;
+        flex-direction: column;
+        background-color: #FEFAF1;
+
+
+        &__intro{
+            text-align: center;
+
+            margin: 10px auto 30px;
+
+            h2{
+                font-weight: 400;
+                font-size: 32px;
+            }
+
+            p{
+                max-width: 440px;
+                font-family: 'Ovo';
+                font-weight: 400;
+                font-size: 18px;
+                color: #C4C4C4;
+            }
+        }
+
+        .product-recommendation{
+            display: flex;
+            padding: 0 20px;
+            .product-recommendation__intro{
+                width: 500px;
+                h3{
+                    font-family: 'Ovo';
+                    font-weight: 400;
+                    font-size: 22px;
+                    letter-spacing: 0.025em;
+                    text-transform: capitalize;
+                    border-bottom: 2px solid #DDDDDD;
+                    text-align: center;
+                    padding:0 0 10px ;
+                }
+                .recommendation-text{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin: 10px;
+
+                    .product-text-box{
+                        width: 100%;
+                        display: flex;
+                        justify-content: flex-start;
+                        margin:5px;
+                        span{
+                            margin-left: 20px;
+                        }
+                    }
+                }
+
+                .recommendation-outro{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-top: 2px solid #DDDDDD;
+                    border-bottom: 2px solid #DDDDDD;
+                    padding: 20px 0px;
+
+
+                    span{
+                        font-weight: 300;
+                        font-size: 14px;
+                        letter-spacing: 0.1em;
+                        text-decoration-line: underline;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+
+            .recommended-products-container{
+
+                display: flex;
+                width: 100%;
+                overflow-x: scroll;
+                overflow-y: hidden ;
+                
+    
+            }
+
+        }
+
+
+
+
+    }
+
+    .recommendation-footer{
+        height: 680px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &__img{
+            margin-right: -150px;
+        }
+
+        &__body{
+            z-index: 10;
+            width: 580px;
+            height: 320px;
+            background: #F4F4F4;
+            border-radius: 20px;
+            padding: 50px 75px;
+            h3{
+                text-transform: none;
+                margin: 0;
+                font-weight: 700;
+                font-size: 32px;
+                line-height: 40px;
+                margin-bottom: 25px;
+
+            }
+            p{
+                font-family: 'Ovo';
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 20px;
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+}
+
+

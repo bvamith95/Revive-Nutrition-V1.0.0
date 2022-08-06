@@ -15,6 +15,7 @@ const CatagoriesPreview = ()=> {
         <div className="products_container">
         {Object.keys(goalsMap).map((key) => {
           const products = goalsMap[key];
+         
           return (<ProductContainer key={key} title={key} products={products} />);
         })}
         </div>

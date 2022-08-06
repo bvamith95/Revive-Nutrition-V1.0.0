@@ -13,14 +13,14 @@ return (
     <div className="products-container--container">
           <div className='product-title-container'>
           <span>
-          <Link className='title' to={title} >{title.toUpperCase()}</Link>
+          <Link className='title' to={title}>{products[0].title.toUpperCase()}</Link>
+          
           </span>
           </div>
 
 
           <div className='products-container--products'>
           {products
-            .filter((_, idx) => idx < 3)
             .map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}

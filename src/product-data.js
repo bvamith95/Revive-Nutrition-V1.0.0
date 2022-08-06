@@ -1,22 +1,14 @@
-const SHOP_DATA = [
-  {
-    goal: 'energy',
-    goalTitle:"General Wellness & Energy",
-    items: [
-      {
+const PRODUCT_DATA = [
+    {
         id:0,
         title:"Multi-Vitamin",
         description:"General Wellness & Energy.",
         price:300,
         imageUrl: "https://vitaminme.co.za/wp-content/uploads/2020/05/Hero-Image-1@2x.png",
         info:"600mg Ashwagandha Extract",
+        goal: 'energy',
+        goalTitle: 'General Wellness & Energy'
       },
-    ],
-  },
-  {
-    goal: 'bones',
-    goalTitle:"Bone Health & Wellness",
-    items: [
       {
         id:1,
         title:"Calcium + Zinc + Magnesium",
@@ -24,43 +16,29 @@ const SHOP_DATA = [
         price:300,
         imageUrl: "https://vitaminme.co.za/wp-content/uploads/2020/05/Hero-Image-6@2x.png",
         info:"600mg Calcium + Zinc + Magnesium",
+        goal: 'bones',
+        goalTitle: 'Bone Health & Wellness'
       },
-    ], 
-  },
-  {
-    goal: 'skin',
-    goalTitle:"Promotes Radiant Skin, Hair & Nails",
-    items:[
       {
         id:2,
         title:"Biotonin",
         description:"Promotes Radiant Skin, Hair & Nails.",
         price:300,
         imageUrl: "https://vitaminme.co.za/wp-content/uploads/2020/05/Hero-Image-2@2x.png",
-        info:"600mg Biotonin",
-        
-      }
-    ],
-  },
-  
-  {
-    goal: 'sleep',
-    goalTitle:"Aids & Enhances Sleep",
-    items: [
+        info:"600mg Biotinin Extract",
+        goal: 'skin',
+        goalTitle: 'Promotes Radiant Skin, Hair & Nails'
+      },
       {
         id:3,
         title:"Melatonin + Ginger",
         description:"Aids & Enhances Sleep.",
         price:300,
         imageUrl: "https://vitaminme.co.za/wp-content/uploads/2021/09/Hero-Image-4@2x.png",
-        info:"600mg Melatonin + Ginger",
+        info:"600mg Melatonin + Ginger Extract",
+        goal: 'sleep',
+        goalTitle: 'Aids & Enhances Sleep'
       },
-    ], 
-  },
-  {
-    goal: 'stress',
-    goalTitle:"Limits Stress & Anxiety",
-    items: [
       {
         id:4,
         title:"Aswagandha",
@@ -68,14 +46,9 @@ const SHOP_DATA = [
         price:300,
         imageUrl: "https://vitaminme.co.za/wp-content/uploads/2020/05/DEBLOATING-DIGESTION-Image.png",
         info:"600mg Aswagandha Extract",
-        
-      }
-    ],
-  },
-  {
-    goal: 'recovery',
-    goalTitle:"Enhances Post-Workout Recovery & Reduces Inflammation",
-    items: [
+        goal: 'stress',
+        goalTitle: 'Limits Stress & Anxiety'
+      },
       {
         id:5,
         title:"Curcumin",
@@ -83,14 +56,9 @@ const SHOP_DATA = [
         price:300,
         imageUrl: "https://vitaminme.co.za/wp-content/uploads/2021/09/Hero-Image-4@2x.png",
         info:"600mg Melatonin + Ginger Extract",
-        
-      }
-    ],
-  },
-  {
-    goal: 'detoxA',
-    goalTitle:"Promotes Liver Care & Alcohol Detox",
-    items: [
+        goal: 'recovery',
+        goalTitle: 'Enhances Post-Workout Recovery & Reduces Inflammation'
+      },
       {
         id:6,
         title:"Liver Detox (Silybin & Triphala)",
@@ -98,14 +66,9 @@ const SHOP_DATA = [
         price:300,
         imageUrl: "https://vitaminme.co.za/wp-content/uploads/2020/05/Hero-Image-1@2x.png",
         info:"600mg Silybin & Triphala Extract",
-        
-      }
-    ],
-  },
-  {
-    goal: 'blood',
-    goalTitle:"Enhances Blood Health & Hemoglobin Levels",
-    items: [
+        goal: 'detoxA',
+        goalTitle: 'Promotes Liver Care & Alcohol Detox'
+      },
       {
         id:7,
         title:"Iron + Folic Acid",
@@ -113,14 +76,9 @@ const SHOP_DATA = [
         price:300,
         imageUrl: "https://vitaminme.co.za/wp-content/uploads/2020/05/Hero-Image-6@2x.png",
         info:"600mg Silybin & Triphala Extract",
-        
-      } 
-    ], 
-  },
-  {
-    goal: 'immunity',
-    goalTitle:"Promotes Gneral Immunity & Wellness",
-    items: [
+        goal: 'blood',
+        goalTitle: 'Enhances Blood Health & Hemoglobin Levels'
+      },
       {
         id:8,
         title:"Vitamin C + Zinc",
@@ -128,14 +86,9 @@ const SHOP_DATA = [
         price:300,
         imageUrl: "https://vitaminme.co.za/wp-content/uploads/2020/05/Hero-Image-2@2x.png",
         info:"600mg Vitamin C + Zinc",
-        
-      }
-    ],
-  },
-  {
-    goal: 'detoxD',
-    goalTitle:"Aids in Digital Detox & Screen Protection.",
-    items: [
+        goal: 'immunity',
+        goalTitle: 'Promotes Gneral Immunity & Wellness'
+      },
       {
         id:9,
         title:"Lutein & Zeaxanthin",
@@ -143,10 +96,9 @@ const SHOP_DATA = [
         price:300,
         imageUrl: "https://vitaminme.co.za/wp-content/uploads/2020/05/DEBLOATING-DIGESTION-Image.png",
         info:"600mg Vitamin C + Zinc",
-        
-      }
-    ],
-  },
-];
+        goal: 'detoxD',
+        goalTitle: 'Aids in Digital Detox & Screen Protection.'
+      },
+]
 
-export default SHOP_DATA;  
+  export default PRODUCT_DATA;

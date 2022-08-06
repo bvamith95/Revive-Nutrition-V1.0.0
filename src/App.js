@@ -6,6 +6,7 @@ import Header from './routes/header/header.component';
 import Consultation from './routes/consultation/consultation.component';
 import Authentication from './routes/authentication/authentication.component';
 import Checkout from './routes/checkout/checkout.component';
+import Recommendation from './routes/recommendation/recommendation.component';
 
 const App = ()=> {
 
@@ -19,6 +20,7 @@ const App = ()=> {
       <Route path='/consultation' element={ <Consultation/> }/>
       <Route path='/auth' element={ <Authentication/> }/>
       <Route path='/checkout' element= {<Checkout/>} />
+      <Route path='/recommendation' element= {<Recommendation/>} />
 
     </Route>
 

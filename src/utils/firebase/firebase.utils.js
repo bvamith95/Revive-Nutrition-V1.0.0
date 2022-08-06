@@ -12,6 +12,7 @@ import {
 import {
   getFirestore,
   doc,
+  addDoc,
   getDoc,
   setDoc,
   collection,
@@ -60,6 +61,7 @@ export const addCollectionAndDocuments = async (
   console.log('done with goal');
 };
 
+
 export const addQuestionsAndAnswers = async (
   collectionKey,
   objectsToAdd,
@@ -105,7 +107,6 @@ export const getQuestionsAndAnswers = async () => {
 
 
 
-// Create another function to write user quiz entries createQuizEntry
 export const createUserDocumentFromAuth = async (
   userAuth,
   additionalInformation = {}
@@ -137,6 +138,8 @@ export const createUserDocumentFromAuth = async (
     return userDocRef;
 };
 
+
+
 export const createAuthUserWithEmailAndPassword = async (email, password) => {
   if (!email || !password) return;
 
@@ -153,3 +156,10 @@ export const signInAuthUserWithEmailAndPassword = async (email, password) => {
 export const signOutUser = async () => await signOut(auth);
 
 export const onAuthStateChangedListener = (callback )=> onAuthStateChanged(auth, callback);
+
+
+//PUSH QUIZ USER DATA 
+export const createQuizUserDocument = async(quizUser) =>{
+    await addDoc(collection(db, "quizUserData"), quizUser); 
+
+}

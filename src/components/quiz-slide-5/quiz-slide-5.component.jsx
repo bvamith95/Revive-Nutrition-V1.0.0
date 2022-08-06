@@ -10,8 +10,9 @@ import  './quiz-slide-5.styles.scss';
 
 const QuizSlide5 = (question)=>{
 
-  const {questionText} = question.question.question;
-  const {handleAnswerButtonClick } = useContext(QuizContext);
+  const {questionText, type, name} = question.question.question;
+  const {handleAnswerButtonClick, handleChange} = useContext(QuizContext);
+
 
     return (
         <div className='quiz-body-5'>
@@ -21,14 +22,14 @@ const QuizSlide5 = (question)=>{
               <h2 className='quiz-question'>
               {questionText} 
               </h2>
-            </div>
+            </div> 
   
             <div className='quiz-answers-container'>
               <div className='input-answer'>
-                <FormInput type="email" required  name="email"/>
+                <FormInput type={type} required  name={name} onChange={handleChange}/>
               </div>
 
-              <div className='submit-answer'  onClick={handleAnswerButtonClick }>
+              <div className='submit-answer'  type='submit' onClick={handleAnswerButtonClick}>
                 <NextLogo />
               </div>
           
