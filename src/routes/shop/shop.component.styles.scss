@@ -1,11 +1,12 @@
 .page_container{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100vw;
     min-width: 1200px;
     background-color: #FEFAF1;
     flex-direction: column;
     align-items: center;
+   
 
     .shop-banner{
         background-color: #F79750;

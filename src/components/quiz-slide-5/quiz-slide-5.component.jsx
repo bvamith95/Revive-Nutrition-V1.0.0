@@ -6,7 +6,7 @@ import { useContext } from 'react';
 
 import  './quiz-slide-5.styles.scss';
 
-
+import 'animate.css';
 
 const QuizSlide5 = (question)=>{
 
@@ -15,16 +15,16 @@ const QuizSlide5 = (question)=>{
 
 
     return (
-        <div className='quiz-body-5'>
+        <div className='quiz-body-5 animate__animated  animate__fadeInUp'>
         
 
             <div className='quiz-header'>
-              <h2 className='quiz-question'>
+              <h2 className='quiz-question animate__animated  animate__fadeInUp animate__delay-.2s'>
               {questionText} 
               </h2>
             </div> 
   
-            <div className='quiz-answers-container'>
+            <div className='quiz-answers-container quiz-question animate__animated  animate__fadeInUp animate__delay-.7s'>
               <div className='input-answer'>
                 <FormInput type={type} required  name={name} onChange={handleChange}/>
               </div>

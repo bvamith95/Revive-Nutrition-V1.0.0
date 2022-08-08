@@ -1,13 +1,19 @@
 
 h3{
-    font-size: 14px;
-    text-transform: capitalize;
-    font-weight: 400;
-    margin: 10px 15px;
+    a{
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 500;
+
+    }
+    margin: 10px 15px 0px;
+    border-bottom: 1px solid #F79750;
+    padding: 5px 0 10px;
+
+
 
     a:hover, a:active{
-        text-decoration: underline;
-        text-decoration-color:#F79750;
+        color:#F79750;
 
     }
 }

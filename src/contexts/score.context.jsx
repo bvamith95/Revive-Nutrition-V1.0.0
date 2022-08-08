@@ -1,4 +1,4 @@
-import { createContext} from "react";
+import { createContext, useState} from "react";
 
 const goalScore = {
     sleep: {
@@ -36,8 +36,7 @@ const goalScore = {
 
 
 export const ScoreContext = createContext(
-                                        {goalScore,
-                                        recommendedProducts:{}});
+                                        {goalScore});
 
 
 export const ScoreProvider = ({ children })=>{
@@ -52,12 +51,51 @@ export const ScoreProvider = ({ children })=>{
         }
    }
 
+        const defaultGoalScore = {
+            sleep: {
+                score : 0
+            },
+            energy: {
+                score : 0
+            },
+            stress: {
+                score : 0
+            },
+            immunity: {
+                score : 0
+            },
+            bones: {
+                score : 0
+            },
+            detoxA: {
+                score : 0
+            },
+            detoxD: {
+                score : 0
+            },
+            blood: {
+                score : 0
+            },
+            recovery: {
+                score : 0
+            },
+            skin: {
+                score : 0
+            }
+            
+        }
+
+        const [goalScore, setGoalScore] = useState(defaultGoalScore)
 
 
+   const resetScore =()=>{
+        setGoalScore()
+   }
 
     const value = {
         addScoreToGoal,
         goalScore,
+        resetScore
     };
 
     return <ScoreContext.Provider value={value}>{children}</ScoreContext.Provider>;

@@ -19,25 +19,35 @@
         display: flex;
         align-items: center;
         .quiz-answer{
-            width: 250px;
-            height: 300px;
-            border-radius: 2px;
+            width: 200px;
+            height: 250px;
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
             background-color: #fff;
             border: 1px solid #FFF;
-            margin: 50px;
+            margin: 25px;
+            transition: all 0.3s;
+            padding:  25px;
+
 
             &:hover {
-
+                box-shadow: rgba(247, 151, 80,0.2) 0px 2px 8px 0px;            
                 border: 1px solid #F79750;
                 cursor: pointer;
+                
+            }
+            &:hover > span{
+                color: #F79750;
+
             }
             span{
+                text-transform: capitalize;
+                text-align: center;
                 color: #000;
-                font-size: 22px;
-                font-weight: 600;
+                font-size: 18px;
+                font-weight: 300;
             }
         }
     }

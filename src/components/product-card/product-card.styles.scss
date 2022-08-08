@@ -1,7 +1,6 @@
 
 .product-card{
     width: 200px;
-    max-width: 30%;
     height: 330px;
     flex: 0 0 auto;
     display: flex;
@@ -12,9 +11,11 @@
     margin: 0 25px 25px;
     overflow: hidden;
     background-color: #f4f4f4;
+    transition: all 0.3s;
 
     &:hover {
-        // cursor: pointer;
+        cursor: pointer;
+        box-shadow: rgba(247, 151, 80, 0.14) 0px 3px 8px;
     
         &  .product-card__img{
           transform: scale(1.1);

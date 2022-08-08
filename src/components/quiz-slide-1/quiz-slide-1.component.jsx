@@ -6,23 +6,25 @@ import { ScoreContext } from '../../contexts/score.context';
 
 import { useContext } from 'react';
 
+import 'animate.css';
+
 const QuizSlide1 = (question)=>{
 
     const {questionText, answerOptions} = question.question.question;
     const {handleAnswerButtonClick } = useContext(QuizContext);
     const {addScoreToGoal} = useContext(ScoreContext);
       return (
-        <div className='quiz-body-1'>
+        <div className='quiz-body-1 animate__animated  animate__fadeInUp' >
           
   
         <div className='quiz-header'>
-          <h2 className='quiz-question'>
+          <h2 className='quiz-question animate__animated  animate__fadeInUp animate__delay-.2s'>
           {questionText}
             
           </h2>
         </div>
         
-        <div className='quiz-answers-container'>
+        <div className='quiz-answers-container quiz-question animate__animated  animate__fadeInUp animate__delay-.7s'>
 
 
             {Object.keys(answerOptions).map((key)=>{

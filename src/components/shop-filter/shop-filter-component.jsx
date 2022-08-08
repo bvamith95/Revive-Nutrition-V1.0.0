@@ -20,7 +20,7 @@ const ShopFilter = ()=> {
           </Link>
           {Object.keys(goalsMap).map((key) => { 
             const products = goalsMap[key];
-            return (<ShopFilterItem key={key} title={products[0].description} link={key}  />);
+            return (<ShopFilterItem key={key} title={products[0].goalMeta} link={key}  />);
           })} 
 
         </div>

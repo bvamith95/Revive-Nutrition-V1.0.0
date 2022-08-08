@@ -1,0 +1,15 @@
+.quiz-controls__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5% 20% 02%;
+    transition: all 0.5s;
+
+    .icon{
+        &:hover{
+            cursor: pointer;
+            transform: translateY(-5px); 
+            transform: scale(105%);
+        }
+    }
+}

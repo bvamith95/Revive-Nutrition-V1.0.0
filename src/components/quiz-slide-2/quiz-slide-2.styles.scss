@@ -28,16 +28,22 @@
             background-color: #fff;
             border: 1px solid #FFF;
             margin: 50px;
+            transition: all 0.3s;
 
             &:hover {
 
                 border: 1px solid #F79750;
                 cursor: pointer;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;            
             }
-            span{
+            &:hover > span{
                 color: #F79750;
-                font-size: 22px;
-                font-weight: 400;
+
+            }
+
+            span{
+                font-size: 18px;
+                font-weight: 300;
             }
         }
     }

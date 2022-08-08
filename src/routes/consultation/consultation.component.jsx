@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router';
 import { QuizContext } from '../../contexts/quiz.context';
 import { useContext} from 'react';
 import QuizContainer from '../../components/quiz-container/quiz-container.component';
+import QuizControls from '../../components/quiz-controls/quiz-controls.component';
 
 
 
@@ -19,9 +20,7 @@ const Consultation = ()=> {
           return (
             <div className='consultation-page'>
               <div className='quiz-container'>
-                <div className='quiz-controls'>
-                <h2>Here are the quiz controls</h2>
-                </div>
+                <QuizControls />
 
                 <QuizContainer />
       

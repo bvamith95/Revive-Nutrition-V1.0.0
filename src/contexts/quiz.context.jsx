@@ -1,7 +1,7 @@
 import { createContext, useState, useEffect } from "react";
 import { getQuestionsAndAnswers } from "../utils/firebase/firebase.utils.js";
-
 import { addQuestionsAndAnswers } from "../utils/firebase/firebase.utils.js";
+
 import QUIZ_DATA from "../quiz-data.js";
 
 export const QuizContext = createContext({
@@ -10,8 +10,6 @@ export const QuizContext = createContext({
 });
 
 
-
- 
 
 export const QuizProvider = ({children}) => {
     const [questionsMap, setQuestionsMap] = useState({});
@@ -75,31 +73,22 @@ export const QuizProvider = ({children}) => {
 
     } ;
 
-    // Handle Submit
-      const handleSubmit = async (event) => {
-        event.preventDefault();
-        console.log(quizFormFields);
-        // try {
-        //   await signInAuthUserWithEmailAndPassword(email, password);
-        //     resetFormFields();
+    // Reset Button 
+    const resetQuiz = ()=> {
+      setQuestionCount(0);
+      setQuizFormFields(defaultQuizFormFields);
 
-        // }catch(error){
-        //     switch(error.code){
-        //         case 'auth/wrong-password':
-        //             alert('incorrect password for email');
-        //             break;
-        //         case 'auth/user-not-found':
-        //             alert('no user associated with this email');
-        //             break;
-        //         default:
-        //             console.log(error);
-        //     }
-        // }
-    };
+    }
+
+    // Exit Quiz Button
+    const exitQuiz = ()=> {
+      setQuestionCount(0);
+      setQuizFormFields(defaultQuizFormFields);
+    }
 
 
 
-    const value = {questionsMap, questionCount, handleAnswerButtonClick, handleChange, updateFormArray, quizFormFields};
+    const value = {questionsMap, questionCount, handleAnswerButtonClick, handleChange, updateFormArray, quizFormFields, resetQuiz};
     return(
         <QuizContext.Provider value={value}>
         {children}
