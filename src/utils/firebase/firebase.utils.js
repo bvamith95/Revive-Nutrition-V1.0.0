@@ -160,6 +160,7 @@ export const onAuthStateChangedListener = (callback )=> onAuthStateChanged(auth,
 
 //PUSH QUIZ USER DATA 
 export const createQuizUserDocument = async(quizUser) =>{
-    await addDoc(collection(db, "quizUserData"), quizUser); 
+    const createdAt = new Date();
+    await addDoc(collection(db, "quizUserData"), {quizUser,createdAt}); 
 
 }
