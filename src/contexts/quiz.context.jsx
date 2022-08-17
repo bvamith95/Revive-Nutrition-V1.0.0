@@ -80,12 +80,6 @@ export const QuizProvider = ({children}) => {
 
     }
 
-    // Exit Quiz Button
-    const exitQuiz = ()=> {
-      setQuestionCount(0);
-      setQuizFormFields(defaultQuizFormFields);
-    }
-
 
 
     const value = {questionsMap, questionCount, handleAnswerButtonClick, handleChange, updateFormArray, quizFormFields, resetQuiz};

@@ -89,7 +89,7 @@ export const ScoreProvider = ({ children })=>{
 
 
    const resetScore =()=>{
-        setGoalScore()
+        setGoalScore(defaultGoalScore);
    }
 
     const value = {
