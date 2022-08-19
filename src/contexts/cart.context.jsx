@@ -39,7 +39,7 @@ import { createAction } from '../utils/reducer/reducer.utils';
         );
     };
 
-
+// Redux 
 
 const CART_ACTION_TYPES = {
     SET_IS_CART_OPEN: 'SET_IS_CART_OPEN',
