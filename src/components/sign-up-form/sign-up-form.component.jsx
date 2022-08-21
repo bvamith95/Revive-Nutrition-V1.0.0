@@ -3,6 +3,8 @@ import { useState} from "react";
 import FormInput from '../form-input/form-input.component';
 import Button from "../button/button.component";
 
+import { useNavigate } from 'react-router';
+
 
 import {createAuthUserWithEmailAndPassword, 
         createUserDocumentFromAuth} from "../../utils/firebase/firebase.utils";
@@ -24,9 +26,13 @@ const SignUpForm = () => {
     const resetFormFields = () => {
         setFormFields(defaultFormFields);
       };
+
+    const navigate = useNavigate();
+
     
       const handleSubmit = async (event) => {
         event.preventDefault();
+        
     
         if (password !== confirmPassword) {
           alert("passwords do not match");
@@ -40,6 +46,8 @@ const SignUpForm = () => {
             await createUserDocumentFromAuth(user, { displayName });
             
             resetFormFields();
+
+            navigate('/');
 
 
         }catch(error){

@@ -2,6 +2,7 @@ import { useState} from "react";
 import FormInput from '../form-input/form-input.component';
 import Button, { BUTTON_TYPE_CLASSES } from '../button/button.component';
 
+import { useNavigate } from 'react-router';
 
 import {
     signInAuthUserWithEmailAndPassword,
@@ -32,6 +33,12 @@ const SignInForm = () => {
         await signInWithGooglePopup();
 
     };
+
+    const navigate = useNavigate();
+
+    const redirectToHome = () => {
+        navigate ('/')
+    }
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -70,7 +77,7 @@ const SignInForm = () => {
                 
                 <div className="buttons-container">
                     <Button  type="submit">Sign In</Button>
-                    <Button type="button" buttonType='google' onClick={signInWithGoogle}>Google Sign In</Button>
+                    <Button type="button" buttonType='google' onClick={()=>{signInWithGoogle();redirectToHome();}}>Google Sign In</Button>
                 </div>
 
                 </form>
